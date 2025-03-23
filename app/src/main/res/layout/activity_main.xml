@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Select Data Types Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSelectDataTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Data Types"
+        app:backgroundTint="#2196F3"
+        android:textColor="@android:color/white"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <!-- Selected Data Types Display -->
+    <TextView
+        android:id="@+id/tvSelectedDataTypes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Data Types: None"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:background="@drawable/border_box"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="12dp" />
+
+    <!-- Input Field for Quantity -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#FF9800"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Quantity"
+            android:padding="12dp"
+            android:textColorHint="#757575"
+            android:textColor="#000000"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Generate Data Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Data"
+        app:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false" />
+
+    <!-- Scrollable Output Display -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_marginTop="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/sv"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tvOutput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:background="@android:color/white"
+                android:scrollbars="vertical"/>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Copy Data Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy Data"
+        app:backgroundTint="#673AB7"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false" />
+
+    <!-- Export CSV Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExportCSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export CSV"
+        app:backgroundTint="#FF5722"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false" />
+
+    <!-- Export PDF Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExportPDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export PDF"
+        app:backgroundTint="#607D8B"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false" />
+
+</LinearLayout>
